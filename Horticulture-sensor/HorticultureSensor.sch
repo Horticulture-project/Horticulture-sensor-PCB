@@ -94,7 +94,7 @@ U 1 1 5F1D35E2
 P 10250 7150
 F 0 "J3" H 10330 7192 50  0000 L CNN
 F 1 "Conn_01x03" H 10330 7101 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 10250 7150 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0371_1x03-1MP_P1.25mm_Vertical" H 10250 7150 50  0001 C CNN
 F 3 "~" H 10250 7150 50  0001 C CNN
 	1    10250 7150
 	-1   0    0    1   
@@ -105,7 +105,7 @@ U 1 1 5F1D3F0F
 P 10250 6700
 F 0 "J1" H 10330 6692 50  0000 L CNN
 F 1 "Conn_01x04" H 10330 6601 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 10250 6700 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0471_1x04-1MP_P1.25mm_Vertical" H 10250 6700 50  0001 C CNN
 F 3 "~" H 10250 6700 50  0001 C CNN
 	1    10250 6700
 	-1   0    0    1   
@@ -174,101 +174,6 @@ F 3 "~" H 10500 8750 50  0001 C CNN
 	1    10500 8750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Sensor_Humidity:ENS210 U2
-U 1 1 5F1DBD27
-P 11800 5750
-F 0 "U2" H 12030 5796 50  0000 L CNN
-F 1 "ENS210" H 12030 5705 50  0000 L CNN
-F 2 "Package_DFN_QFN:AMS_QFN-4-1EP_2x2mm_P0.95mm_EP0.7x1.6mm" H 11800 5350 50  0001 C CNN
-F 3 "http://ams.com/eng/Products/Environmental-Sensors/Relative-Humidity-and-Temperature-Sensors/ENS210" H 11800 5750 50  0001 C CNN
-	1    11800 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5F1E05C2
-P 10250 6100
-F 0 "#PWR0106" H 10250 5850 50  0001 C CNN
-F 1 "GND" H 10255 5927 50  0000 C CNN
-F 2 "" H 10250 6100 50  0001 C CNN
-F 3 "" H 10250 6100 50  0001 C CNN
-	1    10250 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0107
-U 1 1 5F1E05C8
-P 9750 5800
-F 0 "#PWR0107" H 9750 5650 50  0001 C CNN
-F 1 "VCC" V 9765 5928 50  0000 L CNN
-F 2 "" H 9750 5800 50  0001 C CNN
-F 3 "" H 9750 5800 50  0001 C CNN
-	1    9750 5800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0108
-U 1 1 5F1E1FBC
-P 10550 5800
-F 0 "#PWR0108" H 10550 5650 50  0001 C CNN
-F 1 "+3.3V" V 10565 5928 50  0000 L CNN
-F 2 "" H 10550 5800 50  0001 C CNN
-F 3 "" H 10550 5800 50  0001 C CNN
-	1    10550 5800
-	0    1    1    0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 5F1E248B
-P 10200 5350
-F 0 "JP1" H 10200 5555 50  0000 C CNN
-F 1 "SolderJumper_2_Open" H 10200 5464 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10200 5350 50  0001 C CNN
-F 3 "~" H 10200 5350 50  0001 C CNN
-	1    10200 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9850 5800 9850 5350
-Wire Wire Line
-	9850 5350 10050 5350
-Wire Wire Line
-	10350 5350 10550 5350
-Wire Wire Line
-	10550 5350 10550 5800
-Connection ~ 10550 5800
-$Comp
-L Device:C_Small C1
-U 1 1 5F1E3086
-P 9850 5900
-F 0 "C1" H 9942 5946 50  0000 L CNN
-F 1 "1 uF" H 9942 5855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 9850 5900 50  0001 C CNN
-F 3 "~" H 9850 5900 50  0001 C CNN
-	1    9850 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 5F1E3EA6
-P 10550 5900
-F 0 "C2" H 10642 5946 50  0000 L CNN
-F 1 "1 uF" H 10642 5855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 10550 5900 50  0001 C CNN
-F 3 "~" H 10550 5900 50  0001 C CNN
-	1    10550 5900
-	1    0    0    -1  
-$EndComp
-Connection ~ 10250 6100
-Wire Wire Line
-	10550 6000 10550 6100
-Wire Wire Line
-	10550 6100 10250 6100
-Wire Wire Line
-	10250 6100 9850 6100
-Wire Wire Line
-	9850 6100 9850 6000
 Text GLabel 8650 7750 2    50   Input ~ 0
 i2c-addr_2
 Text GLabel 8650 7850 2    50   Input ~ 0
@@ -276,7 +181,7 @@ i2c-addr_3
 Text GLabel 8650 7550 2    50   Input ~ 0
 i2c-addr_0
 Text GLabel 8650 7350 2    50   Input ~ 0
-mosfet1
+UART-tx
 Text GLabel 10350 8750 0    50   Input ~ 0
 i2c-addr_0
 $Comp
@@ -313,32 +218,6 @@ F 2 "" H 10650 9100 50  0001 C CNN
 F 3 "" H 10650 9100 50  0001 C CNN
 	1    10650 9100
 	0    -1   -1   0   
-$EndComp
-Text GLabel 11500 5650 0    50   Input ~ 0
-I2c-SCL
-Text GLabel 11500 5850 0    50   Input ~ 0
-I2c-SDA
-$Comp
-L power:+3.3V #PWR0111
-U 1 1 5F1E934D
-P 11900 5450
-F 0 "#PWR0111" H 11900 5300 50  0001 C CNN
-F 1 "+3.3V" V 11915 5578 50  0000 L CNN
-F 2 "" H 11900 5450 50  0001 C CNN
-F 3 "" H 11900 5450 50  0001 C CNN
-	1    11900 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0112
-U 1 1 5F1E9A7F
-P 11900 6050
-F 0 "#PWR0112" H 11900 5800 50  0001 C CNN
-F 1 "GND" H 11905 5877 50  0000 C CNN
-F 2 "" H 11900 6050 50  0001 C CNN
-F 3 "" H 11900 6050 50  0001 C CNN
-	1    11900 6050
-	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP4
@@ -391,14 +270,14 @@ $EndComp
 Text GLabel 8650 7150 2    50   Input ~ 0
 AnalogSignal0
 Text GLabel 8650 7450 2    50   Input ~ 0
-mosfet0
+UART-rx
 $Comp
 L Connector_Generic:Conn_01x04 J4
 U 1 1 5F1F147E
 P 11700 6650
 F 0 "J4" H 11780 6642 50  0000 L CNN
 F 1 "Conn_01x04" H 11780 6551 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 11700 6650 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0471_1x04-1MP_P1.25mm_Vertical" H 11700 6650 50  0001 C CNN
 F 3 "~" H 11700 6650 50  0001 C CNN
 	1    11700 6650
 	-1   0    0    1   
@@ -424,7 +303,7 @@ U 1 1 5F1F2035
 P 11700 7150
 F 0 "J5" H 11780 7192 50  0000 L CNN
 F 1 "Conn_01x03" H 11780 7101 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 11700 7150 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0371_1x03-1MP_P1.25mm_Vertical" H 11700 7150 50  0001 C CNN
 F 3 "~" H 11700 7150 50  0001 C CNN
 	1    11700 7150
 	-1   0    0    1   
@@ -453,84 +332,6 @@ F 3 "" H 11900 7250 50  0001 C CNN
 	1    11900 7250
 	0    1    1    0   
 $EndComp
-Text GLabel 10250 8100 0    50   Input ~ 0
-mosfet0
-Text GLabel 12150 7950 0    50   Input ~ 0
-mosfet1
-$Comp
-L power:GND #PWR0121
-U 1 1 5F203D9A
-P 12650 8150
-F 0 "#PWR0121" H 12650 7900 50  0001 C CNN
-F 1 "GND" H 12655 7977 50  0000 C CNN
-F 2 "" H 12650 8150 50  0001 C CNN
-F 3 "" H 12650 8150 50  0001 C CNN
-	1    12650 8150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0122
-U 1 1 5F203FD3
-P 10750 8300
-F 0 "#PWR0122" H 10750 8050 50  0001 C CNN
-F 1 "GND" H 10755 8127 50  0000 C CNN
-F 2 "" H 10750 8300 50  0001 C CNN
-F 3 "" H 10750 8300 50  0001 C CNN
-	1    10750 8300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J6
-U 1 1 5F20658D
-P 12850 6550
-F 0 "J6" H 12768 6225 50  0000 C CNN
-F 1 "Conn_01x02" H 12768 6316 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 12850 6550 50  0001 C CNN
-F 3 "~" H 12850 6550 50  0001 C CNN
-	1    12850 6550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J7
-U 1 1 5F207F52
-P 12850 7050
-F 0 "J7" H 12768 6725 50  0000 C CNN
-F 1 "Conn_01x02" H 12768 6816 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 12850 7050 50  0001 C CNN
-F 3 "~" H 12850 7050 50  0001 C CNN
-	1    12850 7050
-	-1   0    0    1   
-$EndComp
-Text GLabel 10750 7900 1    50   Input ~ 0
-control_0
-Text GLabel 12650 7750 1    50   Input ~ 0
-control_1
-Text GLabel 13050 6450 2    50   Input ~ 0
-control_0
-Text GLabel 13050 6950 2    50   Input ~ 0
-control_1
-$Comp
-L Device:R_Small R2
-U 1 1 5F2107E9
-P 12350 8050
-F 0 "R2" V 12154 8050 50  0000 C CNN
-F 1 "10 kohm" V 12245 8050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 12350 8050 50  0001 C CNN
-F 3 "~" H 12350 8050 50  0001 C CNN
-	1    12350 8050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R1
-U 1 1 5F211AEC
-P 10450 8200
-F 0 "R1" V 10254 8200 50  0000 C CNN
-F 1 "10 kohm" V 10345 8200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 10450 8200 50  0001 C CNN
-F 3 "~" H 10450 8200 50  0001 C CNN
-	1    10450 8200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR0125
 U 1 1 5F2143D5
@@ -549,62 +350,6 @@ NoConn ~ 7950 6350
 NoConn ~ 7650 7950
 NoConn ~ 7650 8050
 NoConn ~ 7650 8250
-$Comp
-L Connector_Generic:Conn_01x02 J8
-U 1 1 5F35653E
-P 12850 6000
-F 0 "J8" H 12768 5675 50  0000 C CNN
-F 1 "Conn_01x02" H 12768 5766 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 12850 6000 50  0001 C CNN
-F 3 "~" H 12850 6000 50  0001 C CNN
-	1    12850 6000
-	-1   0    0    1   
-$EndComp
-Text GLabel 13050 5900 2    50   Input ~ 0
-12V+
-Text GLabel 13050 6000 2    50   Input ~ 0
-12V-
-$Comp
-L Transistor_FET:IRLML0030 Q2
-U 1 1 5F35731A
-P 12550 7950
-F 0 "Q2" H 12755 7996 50  0000 L CNN
-F 1 "IRLML2030TRPBF" H 12755 7905 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 12750 7875 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df" H 12550 7950 50  0001 L CNN
-	1    12550 7950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRLML0030 Q1
-U 1 1 5F36376E
-P 10650 8100
-F 0 "Q1" H 10855 8146 50  0000 L CNN
-F 1 "IRLML2030TRPBF" H 10855 8055 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 10850 8025 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df" H 10650 8100 50  0001 L CNN
-	1    10650 8100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:MCP1700-1202E_SOT23 U3
-U 1 1 5F36787F
-P 10250 5800
-F 0 "U3" H 10250 6042 50  0000 C CNN
-F 1 "MCP1700-3302E_TO" H 10250 5951 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 10250 6025 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 10250 5800 50  0001 C CNN
-	1    10250 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 13050 6550 2    50   Input ~ 0
-12V+
-Text GLabel 13050 7050 2    50   Input ~ 0
-12V+
-Text GLabel 12650 8150 2    50   Input ~ 0
-12V-
-Text GLabel 10750 8300 2    50   Input ~ 0
-12V-
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5F36BCD4
@@ -649,11 +394,6 @@ F 3 "" H 8850 9250 50  0001 C CNN
 	1    8850 9250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9950 5800 9850 5800
-Connection ~ 9850 5800
-Wire Wire Line
-	9750 5800 9850 5800
 $Comp
 L power:VCC #PWR0105
 U 1 1 5F38DC6C
@@ -676,27 +416,97 @@ F 3 "" H 11900 6550 50  0001 C CNN
 	1    11900 6550
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	10250 8100 10450 8100
-Connection ~ 10450 8100
-Wire Wire Line
-	10750 8300 10450 8300
-Connection ~ 10750 8300
-Wire Wire Line
-	12150 7950 12350 7950
-Connection ~ 12350 7950
-Wire Wire Line
-	12350 8150 12650 8150
-Connection ~ 12650 8150
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0106
 U 1 1 5FA921B9
 P 7650 7350
-F 0 "#PWR?" H 7650 7100 50  0001 C CNN
+F 0 "#PWR0106" H 7650 7100 50  0001 C CNN
 F 1 "GND" H 7655 7177 50  0000 C CNN
 F 2 "" H 7650 7350 50  0001 C CNN
 F 3 "" H 7650 7350 50  0001 C CNN
 	1    7650 7350
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 5FC9F801
+P 11250 6050
+F 0 "J6" H 11330 6042 50  0000 L CNN
+F 1 "Conn_01x04" H 11330 5951 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0471_1x04-1MP_P1.25mm_Vertical" H 11250 6050 50  0001 C CNN
+F 3 "~" H 11250 6050 50  0001 C CNN
+	1    11250 6050
+	-1   0    0    1   
+$EndComp
+Text GLabel 11450 5950 2    50   Input ~ 0
+UART-rx
+Text GLabel 11450 6050 2    50   Input ~ 0
+UART-tx
+$Comp
+L power:GND #PWR0107
+U 1 1 5FC9FA7D
+P 11450 5850
+F 0 "#PWR0107" H 11450 5600 50  0001 C CNN
+F 1 "GND" H 11455 5677 50  0000 C CNN
+F 2 "" H 11450 5850 50  0001 C CNN
+F 3 "" H 11450 5850 50  0001 C CNN
+	1    11450 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5FC9FA87
+P 11450 6150
+F 0 "#PWR0108" H 11450 6000 50  0001 C CNN
+F 1 "VCC" V 11465 6278 50  0000 L CNN
+F 2 "" H 11450 6150 50  0001 C CNN
+F 3 "" H 11450 6150 50  0001 C CNN
+	1    11450 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5FCA2094
+P 7950 6950
+F 0 "C1" V 7721 6950 50  0000 C CNN
+F 1 "C_Small" V 7812 6950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7950 6950 50  0001 C CNN
+F 3 "~" H 7950 6950 50  0001 C CNN
+	1    7950 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5FCA2F57
+P 7650 6900
+F 0 "R1" H 7709 6946 50  0000 L CNN
+F 1 "R_Small" H 7709 6855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7650 6900 50  0001 C CNN
+F 3 "~" H 7650 6900 50  0001 C CNN
+	1    7650 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 7150 7650 7000
+Wire Wire Line
+	7650 6800 8050 6800
+Wire Wire Line
+	8050 6800 8050 6950
+Wire Wire Line
+	8050 6950 8150 6950
+Connection ~ 8050 6950
+Connection ~ 8150 6950
+Wire Wire Line
+	8150 6950 8200 6950
+$Comp
+L power:GND #PWR0111
+U 1 1 5FCA568E
+P 7850 6950
+F 0 "#PWR0111" H 7850 6700 50  0001 C CNN
+F 1 "GND" H 7855 6777 50  0000 C CNN
+F 2 "" H 7850 6950 50  0001 C CNN
+F 3 "" H 7850 6950 50  0001 C CNN
+	1    7850 6950
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
